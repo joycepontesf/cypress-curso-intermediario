@@ -1,34 +1,48 @@
-# Testes automatizados com Cypress - Intermediário
+## Curso Cypress Intermediário
 
-👋 Seja bem-vinda(o)!
+Projeto criado em atendimento aos exercícios do curso Cypress Intermediário ministrado por [Walmyr Filho](https://walmyr.dev).
 
-É muito bom tê-la(o) aqui. Tenho certeza que você vai adorar este curso. ❤️
+Neste repositório será encontrado uma suíte de testes via API, GUI e CLI para a versão open-source do GitLab, rodando em container em um ambiente local, exercitando as seguintes funcionalidades:
 
-## O que você vai aprender
+- Login e Logout
+- Criação de projeto e de issue
+- Adição de uma etiqueta (label) à uma issue
+- Adição de um marco (milestone) à uma issue
+- Git clone
 
-Durante o curso de testes automatizados com Cypress (intermediário) você vai aprender:
+> Nota: Estou usando a imagem Docker [yrzr/gitlab-ce-arm64v8](https://hub.docker.com/r/yrzr/gitlab-ce-arm64v8), dado que possuo uma máquina com chip M1. No entanto, durante o curso é utilizado a imagem [wlsf82/gitlab-ce](https://hub.docker.com/r/wlsf82/gitlab-ce). Essa diferença pode impactar nos seletores CSS.
 
-- Como configurar o ambiente local de desenvolvimento
-- Como instalar e configurar o Cypress
-- Como criar testes automatizados de interface gráfica de usuário
-- Como criar testes automatizados de API (com _feedback_ visual no navegador)
-- Como testar APIs que necessitam um _token_ de acesso
-- Como criar testes otimizados e direto-ao-ponto
-- Como salvar a sessão do usuário no navegador para posterior restauração
-- Como validar se a sessão do usuário ainda é válida e como lidar com isso quando a mesma é invalidada
-- Como fazer a limpeza e criação da massa de dados antes do teste começar
-- Como proteger dados sensíveis, tais como senhas e _tokens_ de acesso
-- Como organizar os testes e comandos customizados em diferentes "camadas" (_API, CLI, GUI_)
-- Como estruturar os testes pensando em pré-condições, ações e resultados esperados
-- Como gerar dados aleatórios para uso nos testes automatizados
-- Como habilitar funcionalidades experimentais do Cypress
-- Como executar comandos à nível de sistema operacional
-- E como testar a leitura de arquivos
+#### Pré-requisitos
 
-## Vamos começar?
+Certifique-se de ter instalado as seguintes ferramentas:
 
-Vá para a seção [estrutura do curso](./lessons/_course-structure_.md).
+- [Docker](https://www.docker.com/) (versão `24.0.6`)
+- [git](https://git-scm.com/) (versão `2.39.2`)
+- [Node.js](https://nodejs.org/en/) (versão `v20.8.0`)
+- npm (versão `10.1.0`)
 
-___
+#### Passos de Instalação
 
-Este é mais um curso da [**Escola Talking About Testing**](https://udemy.com/user/walmyr).
+Abra o terminal da sua preferência e faça o clone deste repositório no seu ambiente local:
+
+```bash
+git clone https://github.com/joycepontesf/cypress-curso-intermediario.git
+```
+
+Ainda no terminal, navegue até a pasta já clonada em sua máquina e execute o comando abaixo para instalar as dependências usadas no projeto:
+
+```bash
+npm install
+```
+
+### Executando Testes
+
+Em seu terminal, na pasta raiz do diretório, execute os scripts abaixo para rodar os testes
+
+`npm test` - para executar os testes no modo headless.
+
+`npm run cy:open` - para abrir o Cypress no modo interativo.
+
+### Dúvidas
+
+Surgiu alguma dúvida sobre este projeto? Estou disponível em [Joyce Pontes](https://www.linkedin.com/in/joycepontes/).
